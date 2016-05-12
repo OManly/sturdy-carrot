@@ -1,0 +1,152 @@
+*{margin: 0;padding: 0}
+body{background: #fff;font-size: 26px;font-family: 微软雅黑}
+ul,li{list-style: none;}
+#container{width: 960px;background: #000;margin: 0 auto;padding: 0 30px}
+header{height:50px;background: #e789f2;text-align: center;}
+footer{height:50px;background: #3c52f2;text-align: center;}
+
+#main{height: 400px;background: #ffffff;padding: 40px 0}
+#main .wrap{width: 500px;height:300px;border: 5px solid #3c52f2;border-radius: 5px;margin: 0 auto;overflow: hidden}
+#piclist{width: 500%;height: 100%;-webkit-animation: slide1 8s ease-out infinite}
+#piclist li{float: left;width: 20%;height: 100%}
+#piclist img{width: 100%;height: 100%}
+#main .input{display: none}
+
+@-webkit-keyframes slide1 {
+    0%
+    {
+        margin-left: 0;
+    }
+    15%
+    {
+        margin-left: 0;
+    }
+    25%
+    {
+        margin-left: -500px;
+    }
+    40%
+    {
+        margin-left: -500px;
+    }
+    50%
+    {
+        margin-left: -1000px;
+    }
+    65%
+    {
+        margin-left: -1000px;
+    }
+    75%
+    {
+        margin-left: -1500px;
+    }
+    80%
+    {
+        margin-left: -1500px;
+    }
+    100%
+    {
+        margin-left: 0;
+    }
+}
+@-webkit-keyframes slide2 {
+    0%
+    {
+        margin-left: -500px;
+    }
+    25%
+    {
+        margin-left: -1000px;
+    }
+    50%
+    {
+        margin-left: -1500px;
+    }
+    75%
+    {
+        margin-left: 0px;
+    }
+    100%
+    {
+        margin-left: -500px;
+    }
+}
+@-webkit-keyframes slide3 {
+    0%
+    {
+        margin-left: -1000px;
+    }
+    25%
+    {
+        margin-left: -1500px;
+    }
+    50%
+    {
+        margin-left: 0;
+    }
+    75%
+    {
+        margin-left: -500px;
+    }
+    100%
+    {
+        margin-left: -1000px;
+    }
+}
+@-webkit-keyframes slide4 {
+    0%
+    {
+        margin-left: -1500px;
+    }
+    25%
+    {
+        margin-left: 0;
+    }
+    50%
+    {
+        margin-left: -500px;
+    }
+    75%
+    {
+        margin-left: -1000px;
+    }
+    100%
+    {
+        margin-left: -1500px;
+    }
+}
+
+#101:checked ~ #piclist{
+    -webkit-animation-name: slide1;
+}
+#102:checked ~ #piclist{
+    -webkit-animation-name: slide2;
+}
+#103:checked ~ #piclist{
+    -webkit-animation-name: slide3;
+}
+#104:checked ~ #piclist{
+    -webkit-animation-name: slide4;
+}
+
+#101:active ~ #piclist{
+    -webkit-animation-name: none;
+    margin-left: 0;
+}
+#102:active ~ #piclist{
+    -webkit-animation-name: none;
+    margin-left: -500px;
+}
+#103:active ~ #piclist{
+    -webkit-animation-name: none;
+    margin-left: -1000px;
+}
+#104:active ~ #piclist{
+    -webkit-animation-name: none;
+    margin-left: -1500px;
+}
+
+
+#label{text-align: center;}
+#label label{width: 10px;height:10px;border-radius: 5px;background: #000;margin: 10px;display: inline-block}
